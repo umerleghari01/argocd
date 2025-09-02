@@ -6,12 +6,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/LondheShubham153/argocd-demos.git
+    repoURL: https://github.com/Amitabh-DevOps/argocd-demos.git
     targetRevision: main
-    path: chapter4-first-app-deployment/declarative_approach/online-shop
+    path: declarative_approach/online_shop
   destination:
-    server: https://kubernetes.default.svc
-    namespace: default
+    server: https://172.31.19.178:33893
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true
