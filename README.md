@@ -1,6 +1,9 @@
 # argocd-demos
 Demos of arogcd one shot video
 
+> [!IMPORTANT]
+> 
+> change `server: https://172.31.19.178:33893` line with your cluster server url server url in Application CRDs, in both dirctory: `declarative_approach/online_shop` and `app_of_apps/apps`
 
 ### ArgoCD in One shot
 
