@@ -1,3 +1,0 @@
-kustomize:
-  images:
-  - amitabhdevops/chai-devops:v1.0.3
