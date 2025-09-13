@@ -3,24 +3,4 @@ Demos of arogcd one shot video
 
 > [!IMPORTANT]
 > 
-> change `server: https://172.31.19.178:33893` line with your cluster server url server url in Application CRDs, in both dirctory: `declarative_approach/online_shop` and `app_of_apps/apps`
-
-### ArgoCD in One shot
-
-UI approach - Nginx example
-
-This example shows how to deploy a simple Nginx application using a UI approach.
-
----
-
-CLI approach - Apach example
-
-This example shows how to deploy a simple Apache application using a CLI approach.
-
----
-
-Declarative approach - online shop as example
-
-This example shows how to deploy a simple online shop application using a declarative approach with Kubernetes manifests.
-
-Argo CD applications, projects and settings can be defined declaratively using Kubernetes manifests. These can be updated using kubectl apply, without needing to touch the argocd command-line tool.
+> change `server: https://172.31.19.178:33893` line with your cluster server url in all Application CRDs, in dirctories: `declarative_approach/online_shop` (online_shop_app.yml), `app_of_apps/apps` (apache_app.yml, nginx_app.yml, online_shop_app.yml), `
