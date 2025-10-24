@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: my-project
+  namespace: argocd
+spec:
+  sourceRepos:
+    - https://github.com/umerleghari01/argocd.git
+  destinations:
+    - server: https://172.30.158.45:33893
+      namespace: default
+  clusterResourceWhitelist:
+    - group: "*"
+      kind: "*"
+  namespaceResourceWhitelist:
+    - group: "*"
+      kind: "*"
+  roles:
+    - name: project-admin
+      policies:
+        - p, proj:my-project:project-admin, applications, *, my-project/*, allow
+
+
+
+
+
+
+
+
