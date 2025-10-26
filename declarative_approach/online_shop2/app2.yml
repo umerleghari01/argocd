@@ -11,7 +11,7 @@ spec:
     path: declarative_approach/online_shop2
   destination:
     server:  https://172.30.158.45:33893
-    namespace: default
+    namespace: my-namespace
   syncPolicy:
     automated:
       prune: true
