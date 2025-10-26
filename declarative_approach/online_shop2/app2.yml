@@ -10,10 +10,13 @@ spec:
     targetRevision: main
     path: declarative_approach/online_shop2
   destination:
-    server:  https://172.30.158.45:33893
-    namespace: my-namespace
+    server: https://172.30.158.45:33893
+    namespace: shop-namespace
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-
+    syncOptions:
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=true
+      - PruneLast=true
