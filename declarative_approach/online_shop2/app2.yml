@@ -1,1 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: shop2
+  namespace: argocd
+spec:
+  project: my-project
+  source:
+    repoURL: https://github.com/umerleghari01/argocd.git
+    targetRevision: main
+    path: declarative_approach/online_shop2
+  destination:
+    server:  https://172.30.158.45:33893
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
 
