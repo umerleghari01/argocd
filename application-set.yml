@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: app-list
+  namespace: argocd
+spec:
+  generators:
+    - list:
+        elements:
+          - app: shop
+            path: declarative_approach/online_shop
+          - app: shop2
+            path: declarative_approach/online_shop2
+  template:
+    metadata:
+      name: '{{app}}'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/umerleghari01/argocd.git
+        targetRevision: main
+        path: '{{path}}'
+      destination:
+        server: https://172.30.158.45:33894
+        namespace: default
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
