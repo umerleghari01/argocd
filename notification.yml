@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: shop
+  namespace: argocd
+  annotations:
+    notifications.argoproj.io/subscribe.on-sync-succeeded.email: "true"
+    notifications.argoproj.io/subscribe.on-sync-failed.email: "true"
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/umerleghari01/argocd.git
+    targetRevision: main
+    path: declarative_approach/online_shop
+  destination:
+    server: https://172.30.158.45:33894
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
