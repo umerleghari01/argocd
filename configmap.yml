@@ -7,11 +7,11 @@ data:
   context: |
     argocdUrl: http://172.30.158.45:8081
   service.email.gmail: |
-    username: "umerleghari01@gmail.com"
-    password: "adhgycuxbulkukts"
+    username: $email-username
+    password: $email-password
     host: smtp.gmail.com
     port: 465
-    from: "umerleghari01@gmail.com"
+    from: $email-username
   template.app-sync-succeeded: |
     email:
       subject: Application {{.app.metadata.name}} has been successfully synced.
