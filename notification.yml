@@ -4,8 +4,8 @@ metadata:
   name: shop
   namespace: argocd
   annotations:
-    notifications.argoproj.io/subscribe.on-sync-succeeded.email: "umerleghari01@gmail.com"
-    notifications.argoproj.io/subscribe.on-sync-failed.email: "umerleghari01@gmail.com"
+    notifications.argoproj.io/subscribe.on-sync-succeeded.email: "receiver@email.com"
+    notifications.argoproj.io/subscribe.on-sync-failed.email: "receiver@email.com"
 spec:
   project: default
   source:
