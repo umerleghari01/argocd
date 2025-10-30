@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: shop
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: shop=docker.io/umerleghari01/shop:v1.0.0
+    argocd-image-updater.argoproj.io/shop.update-strategy: semver
+    argocd-image-updater.argoproj.io/write-back-method: git
+    argocd-image-updater.argoproj.io/git-branch: main
+    argocd-image-updater.argoproj.io/git-repo-path: declarative_approach/online_shop3
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/umerleghari01/argocd.git
+    targetRevision: main
+    path: declarative_approach/online_shop3
+  destination:
+    server: https://172.30.158.45:33894
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
