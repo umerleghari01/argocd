@@ -4,7 +4,7 @@ metadata:
   name: shop
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: shop=umerleghari01/shop:v1.0.0
+    argocd-image-updater.argoproj.io/image-list: shop=umerleghari01/shop
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/my-secret
     argocd-image-updater.argoproj.io/shop.update-strategy: semver
 spec:
