@@ -1,3 +1,3 @@
-```Bash
+```bash
 pwd
 ```
