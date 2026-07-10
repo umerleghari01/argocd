@@ -1,3 +1,3 @@
-```Shell
+```text
 pwd
 ```
