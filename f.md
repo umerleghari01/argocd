@@ -1,4 +1,3 @@
-markdown
 ```bash
 git status
 git add .
