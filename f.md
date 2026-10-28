@@ -1,5 +1,3 @@
 ```bash
-pwd
-ls
-whoami
+pwd && whoami && ls
 ```
