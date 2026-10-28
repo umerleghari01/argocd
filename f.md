@@ -1,0 +1,5 @@
+```Bash
+pwd
+ls
+whoami
+```
