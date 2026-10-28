@@ -1,5 +1,4 @@
-markdown
-```vi
+```bash
 :set number
 :wq
 :q!
