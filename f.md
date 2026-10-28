@@ -1,3 +1,3 @@
-```Bash
+```bash
 sudo apt update -y
 ```
