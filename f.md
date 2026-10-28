@@ -1,3 +1,6 @@
+markdown
 ```bash
-sudo apt update -y
+git status
+git add .
+git commit -m "first commit"
 ```
